@@ -35,3 +35,5 @@ c.  Database password: intel123
 6. Allow traffic from EC2 to RDS instance
 
 7. Allow all-traffic to EC2 instance
+
+![15](https://github.com/sharfuddin1986/Project3/assets/106474548/07a65ea9-d8a4-4d5d-8bdb-634f780b503a)
