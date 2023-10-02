@@ -9,6 +9,12 @@
 
 
 2- Go to Aws conslone create RDS database
+
+
+
+    Go to ec2 terminal and run below command
+    $ mysql -h intellipaatdb.ctcnv5mqtmva.us-east-1.rds.amazonaws.com -u intel -p
+
    
    
    https://developer.hashicorp.com/terraform/downloads
