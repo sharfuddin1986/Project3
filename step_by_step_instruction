@@ -36,7 +36,11 @@
 
 
    After that you can use ec2 instance ip put in browser then u can access website and u can enter your detail.
-   It will be save in ur rds databas 
+   It will be save in ur RDS databas 
+
+
+
+   Create Autoscaling group,launch configuration and attach with Load balancer 
 
 
      
