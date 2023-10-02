@@ -8,21 +8,39 @@
    $  sudo apt install php5.6 mysql-client php5.6-mysqli 
 
 
-2- Go to Aws conslone create RDS database
-
+2- Go to Aws console create RDS database
+   standard create -> Mysql -> database name -> username -> password ->select region- public acess -> create
+   Go to instance security group option and copy securtiy group id after go to database security group 
+   Edit inbound rule add->Mysql/aurora -> custom ip after paste e2 instance security group id -> save
 
 
     Go to ec2 terminal and run below command
-    $ mysql -h intellipaatdb.ctcnv5mqtmva.us-east-1.rds.amazonaws.com -u intel -p
+    $ mysql -h intelli.ctcnv5mqtmva.us-east-1.rds.amazonaws.com -u intel -p  then password
+    > show databases;        # after that i can see the intel database 
+    > use intel              # afer exit
+
+
+3- Install file zilla in local system and try to connect
+   after transfer images  folder and index.php file
+
+4- Take remote ec2 instance and check root directory file is there.Try to move /var/www/html folder 
+    
+   $ cd /var/www/html 
+   $ sudo rm index.html 
+   $ pwd       
+   $ cd ~
+   $ sudo cp -r code/ /var/www/html
+   $ sudo nano index.php        # edit this file and put endpoint of rds with user name and password
+     save and exit
+
+
+
+   After that you can use ec2 instance ip put in browser then u can access website and u can enter your detail.
+   It will be save in ur rds databas 
+
+
+     
 
    
    
-   https://developer.hashicorp.com/terraform/downloads
-
- $  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
- $  sudo apt update && sudo apt install terraform
- $  sudo nano main.tf     ### File is attached in repo
- $  terrafornm init
- $  terraform plan
- $  terraform apply
+  
