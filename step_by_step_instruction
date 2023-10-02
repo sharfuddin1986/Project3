@@ -1,1 +1,17 @@
+# Project-3
 
+1- Create Four  Ec2 instance with ubuntu 20.04
+   One for Jenkins/Ansible/Terraform t2 Medium type instance.  
+   One instance t2 medium for Kubernetes Master .
+   Two  Ec2 instance t2 micro type for Replicas.
+   Create One IAM user with Administrator full acess & Ec2 full acess and generate acess key or secret key
+2- Machine-1 need to install terraform.
+   https://developer.hashicorp.com/terraform/downloads
+
+ $  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+ $  sudo apt update && sudo apt install terraform
+ $  sudo nano main.tf     ### File is attached in repo
+ $  terrafornm init
+ $  terraform plan
+ $  terraform apply
