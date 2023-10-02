@@ -1,11 +1,15 @@
 # Project-3
 
-1- Create Four  Ec2 instance with ubuntu 20.04
-   One for Jenkins/Ansible/Terraform t2 Medium type instance.  
-   One instance t2 medium for Kubernetes Master .
-   Two  Ec2 instance t2 micro type for Replicas.
-   Create One IAM user with Administrator full acess & Ec2 full acess and generate acess key or secret key
-2- Machine-1 need to install terraform.
+1- Create  one Ec2 instance with ubuntu 20.04
+   Take remote through putty ya mobax
+   $  sudo apt-get update -y
+   $  sudo apt-get install apache2 -y
+   $  sudo add-apt-repository -y ppa:ondrej/php
+   $  sudo apt install php5.6 mysql-client php5.6-mysqli 
+
+
+2- Go to Aws conslone create RDS database
+   
    https://developer.hashicorp.com/terraform/downloads
 
  $  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
